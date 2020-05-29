@@ -1,4 +1,4 @@
-module shiftreg#(parameter N = 8)
+module shiftreg#(parameter N = 11)
 (input logic clk,
 input logic reset, load,
 input logic sin,
@@ -8,7 +8,7 @@ output logic sout);
 
 always_ff@(posedge clk, posedge reset)
 begin
-if(reset) q<=0;
+if(reset) q<=1;
 else if(load) q <=d;
 else q <= {q[N-2:0], sin};
 end
