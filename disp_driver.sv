@@ -1,8 +1,6 @@
 module disp_driver (input  logic clk, reset,
-                    output logic hsync, vsync, hdisp, vdisp);
-               
-    logic [9:0] hcount;
-    logic [9:0] vcount;
+                    output logic hsync, vsync, hdisp, vdisp,
+                    output logic [9:0] hcount, vcount);
 
     always_ff @(posedge clk, negedge reset) begin
         if (!reset) hcount <= 0;
