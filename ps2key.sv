@@ -28,8 +28,17 @@ always_comb
 	//9
 	
 	//0
-	default: numbers = 11'b111111111111
+	default: numbers = 4'b1111;
+
+	//start, reversed ps2code, parity, stop
+	//w
 	
+	//a
 	
+	//s
+	
+	//d
+	default: directions = 3'b111;
+	endcase
 
 endmodule
