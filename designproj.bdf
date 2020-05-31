@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect -40 120 128 136)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "int_clk" (rect 5 0 37 12)(font "Arial" ))
+	(text "int_clk" (rect 5 0 36 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -35,12 +35,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -104 136 -40 160))
 )
 (pin
 	(input)
 	(rect -40 152 128 168)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "reset" (rect 5 0 30 12)(font "Arial" ))
+	(text "reset" (rect 5 0 29 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -51,12 +52,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -96 168 -40 192))
 )
 (pin
 	(input)
 	(rect -160 464 16 480)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "motion_dir[2..0]" (rect 5 0 82 12)(font "Arial" ))
+	(text "motion_dir[2..0]" (rect 5 0 81 12)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -67,12 +69,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -224 480 -160 504))
 )
 (pin
 	(input)
 	(rect -152 496 16 512)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "motion_trig" (rect 5 0 60 12)(font "Arial" ))
+	(text "motion_trig" (rect 5 0 59 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -83,6 +86,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -208 512 -152 536))
 )
 (pin
 	(output)
@@ -99,6 +103,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1400 216 1456 240))
 )
 (pin
 	(output)
@@ -115,6 +120,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1400 232 1456 256))
 )
 (pin
 	(output)
@@ -131,6 +137,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1400 248 1464 272))
 )
 (symbol
 	(rect 920 176 1120 320)
@@ -195,101 +202,6 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 184 128))
 	)
-)
-(symbol
-	(rect 408 408 624 552)
-	(text "sprite_controller" (rect 5 0 82 12)(font "Arial" ))
-	(text "inst2" (rect 8 128 30 145)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "row[N-1..0]" (rect 0 0 54 12)(font "Arial" ))
-		(text "row[N-1..0]" (rect 21 27 75 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "col[N-1..0]" (rect 0 0 51 12)(font "Arial" ))
-		(text "col[N-1..0]" (rect 21 43 72 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "motion[2..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "motion[2..0]" (rect 21 59 80 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 75 35 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "reset" (rect 0 0 24 12)(font "Arial" ))
-		(text "reset" (rect 21 91 45 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96))
-	)
-	(port
-		(pt 216 32)
-		(output)
-		(text "disp" (rect 0 0 20 12)(font "Arial" ))
-		(text "disp" (rect 179 27 199 39)(font "Arial" ))
-		(line (pt 216 32)(pt 200 32))
-	)
-	(port
-		(pt 216 48)
-		(output)
-		(text "sprite_row[N-1..0]" (rect 0 0 87 12)(font "Arial" ))
-		(text "sprite_row[N-1..0]" (rect 122 43 209 55)(font "Arial" ))
-		(line (pt 216 48)(pt 200 48)(line_width 3))
-	)
-	(port
-		(pt 216 64)
-		(output)
-		(text "sprite_col[N-1..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "sprite_col[N-1..0]" (rect 124 59 208 71)(font "Arial" ))
-		(line (pt 216 64)(pt 200 64)(line_width 3))
-	)
-	(parameter
-		"N"
-		"10"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"WIDTH"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"HEIGHT"
-		"16"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MOV_INC"
-		"4"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"HLIM"
-		"640"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"VLIM"
-		"480"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 200 128))
-	)
-	(annotation_block (parameter)(rect 464 568 640 704))
 )
 (symbol
 	(rect 408 224 624 352)
@@ -523,6 +435,101 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 160 96))
 	)
 	(annotation_block (parameter)(rect 112 368 281 406))
+)
+(symbol
+	(rect 408 408 624 552)
+	(text "sprite_controller" (rect 5 0 82 12)(font "Arial" ))
+	(text "inst2" (rect 8 128 30 145)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "row[N-1..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "row[N-1..0]" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "col[N-1..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "col[N-1..0]" (rect 21 43 72 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "motion[2..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "motion[2..0]" (rect 21 59 80 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 75 35 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 91 45 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "disp" (rect 0 0 20 12)(font "Arial" ))
+		(text "disp" (rect 179 27 199 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "sprite_row[N-1..0]" (rect 0 0 87 12)(font "Arial" ))
+		(text "sprite_row[N-1..0]" (rect 122 43 209 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 3))
+	)
+	(port
+		(pt 216 64)
+		(output)
+		(text "sprite_col[N-1..0]" (rect 0 0 84 12)(font "Arial" ))
+		(text "sprite_col[N-1..0]" (rect 124 59 208 71)(font "Arial" ))
+		(line (pt 216 64)(pt 200 64)(line_width 3))
+	)
+	(parameter
+		"N"
+		"10"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"WIDTH"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"HEIGHT"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MOV_INC"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"HLIM"
+		"640"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"VLIM"
+		"480"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 200 128))
+	)
+	(annotation_block (parameter)(rect 464 568 633 701))
 )
 (connector
 	(pt 904 128)

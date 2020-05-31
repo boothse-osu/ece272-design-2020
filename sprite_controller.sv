@@ -16,9 +16,9 @@ module sprite_controller #(parameter N = 10, WIDTH = 16, HEIGHT = 16,
             3'b100  : start_col <= start_col - MOV_INC;
             default : ;
         endcase
-        if (!reset | start_row < 0) start_row <= 0;
+        if (!reset | $signed(start_row) < 0) start_row <= 0;
         else if (start_row > (VLIM - HEIGHT - 1)) start_row <= (VLIM - HEIGHT - 1);
-        if (!reset | start_col < 0) start_col <= 0;
+        if (!reset | $signed(start_col) < 0) start_col <= 0;
         else if (start_col > (HLIM - WIDTH - 1)) start_col <= (HLIM - WIDTH - 1);
     end
     
