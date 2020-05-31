@@ -5,6 +5,8 @@ module pulse_gen #(parameter N = 8)
 
     logic n;
     
+    // if negative edge on trig,
+    // generate a 1-clock pulse from in to out
     always_ff @(posedge clk) begin
         n <= trig;
         if (~trig & n) out = in;
