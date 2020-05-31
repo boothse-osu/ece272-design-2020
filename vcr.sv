@@ -35,6 +35,7 @@ always_comb
 	//vol_left
 	
 	//vol_right
+	
 	default: directions = 3'b111;
 	endcase
 		
