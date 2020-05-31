@@ -9,17 +9,22 @@ module sprite_controller #(parameter N = 10, WIDTH = 16, HEIGHT = 16,
     logic [N-1:0] start_row, start_col;
     
     always_ff @(posedge clk) begin
-        case (motion)
-            3'b001  : start_row <= start_row - MOV_INC;
-            3'b010  : start_col <= start_col + MOV_INC;
-            3'b011  : start_row <= start_row + MOV_INC;
-            3'b100  : start_col <= start_col - MOV_INC;
-            default : ;
-        endcase
-        if (!reset | $signed(start_row) < 0) start_row <= 0;
-        else if (start_row > (VLIM - HEIGHT - 1)) start_row <= (VLIM - HEIGHT - 1);
-        if (!reset | $signed(start_col) < 0) start_col <= 0;
-        else if (start_col > (HLIM - WIDTH - 1)) start_col <= (HLIM - WIDTH - 1);
+        if (!reset) begin
+            start_row <= 0;
+            start_col <= 0;
+        end
+        else if (motion == 3'b001) 
+            if ($signed(start_row - MOV_INC) < 0) start_row <= 0;
+            else start_row <= start_row - MOV_INC;
+        else if (motion == 3'b010)
+            if (start_col + MOV_INC > (HLIM - WIDTH)) start_col <= (HLIM - WIDTH);
+            else start_col <= start_col + MOV_INC;
+        else if (motion == 3'b011)
+            if (start_row + MOV_INC > (VLIM - HEIGHT)) start_row <= (VLIM - HEIGHT);
+            else start_row <= start_row + MOV_INC;
+        else if (motion == 3'b100)
+            if ($signed(start_col - MOV_INC) < 0) start_col <= 0;
+            else start_col <= start_col - MOV_INC;
     end
     
     always_comb 
