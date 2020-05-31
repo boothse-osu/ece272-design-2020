@@ -1,6 +1,10 @@
 module disp_driver (input  logic clk, reset,
-                    output logic hsync, vsync, hdisp, vdisp,
-                    output logic [9:0] hcount, vcount);
+                    input  logic [11:0] rgb_in,
+                    output logic hsync, vsync,
+                    output logic [11:0] rgb_out,
+                    output logic [9:0] row, col);
+
+    logic [9:0] hcount, vcount;
 
     always_ff @(posedge clk, negedge reset) begin
         if (!reset) hcount <= 0;
@@ -21,10 +25,15 @@ module disp_driver (input  logic clk, reset,
         if (vcount < 2) vsync = 0;
         else vsync = 1;
         
-        if (hcount > 143 & hcount < 784) hdisp <= 1;
-        else hdisp <= 0;
-        
-        if (vcount > 34 & vcount < 515) vdisp <= 1;
-        else vdisp <= 0;
+        if (hcount > 143 & hcount < 784 & vcount > 34 & vcount < 515) begin 
+            rgb_out = rgb_in;
+            row = vcount - 35;
+            col = hcount - 144;
+        end
+        else begin
+            rgb_out = 0;
+            row = 0;
+            col = 0;
+        end
     end
 endmodule
