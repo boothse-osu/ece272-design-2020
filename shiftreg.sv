@@ -6,13 +6,15 @@ input logic [N-1:0]d,
 output logic [N-1:0]q,
 output logic sout);
 
-always_ff@(posedge clk, posedge reset)
+
+always_ff@(posedge clk)
 begin
-if(reset) q<=1;
+if(reset) q<= 11'b11111111111;
 else if(load) q <=d;
 else q <= {q[N-2:0], sin};
 end
 
 assign sout = q[N-1];
+
 endmodule 
 
