@@ -2,7 +2,7 @@ module nes_reader (input  logic clk, data, reset,
                    output logic clock, latch,
                    output logic [7:0] out);
     
-    // suggested clock of around 80kHz
+    // suggested clock of around 83kHz
     
     logic [3:0] n;
     logic [7:0] q;
