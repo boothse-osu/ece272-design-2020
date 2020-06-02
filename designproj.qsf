@@ -119,3 +119,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE shiftreg.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ps2key.sv
 set_global_assignment -name QIP_FILE link_sprite.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name BDF_FILE designproj.bdf
+set_global_assignment -name BDF_FILE nes_block.bdf
