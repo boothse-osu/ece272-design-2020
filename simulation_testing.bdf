@@ -318,7 +318,7 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 176 64))
 	)
-	(annotation_block (parameter)(rect 480 40 662 78))
+	(annotation_block (parameter)(rect 472 48 654 86))
 )
 (symbol
 	(rect 472 -96 664 -16)
@@ -346,7 +346,7 @@ refer to the applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 176 64))
 	)
-	(annotation_block (parameter)(rect 480 -144 662 -106))
+	(annotation_block (parameter)(rect 472 -136 654 -98))
 )
 (symbol
 	(rect 520 200 640 280)
