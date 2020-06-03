@@ -39,12 +39,11 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY shiftreg_test
+set_global_assignment -name TOP_LEVEL_ENTITY designproj
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:09:29  MAY 19, 2020"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name BOARD "MAX 10 DE10 - Lite"
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -59,4 +58,66 @@ set_global_assignment -name BDF_FILE simulation_testing.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE pulse_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE disp_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE address_converter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sprite_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE comparator_m.sv
+set_global_assignment -name SYSTEMVERILOG_FILE comparator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rgb_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE disp_driver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clockmod.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftreg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ps2key.sv
+set_global_assignment -name BDF_FILE designproj.bdf
+set_global_assignment -name QIP_FILE link_sprite.qip
+set_location_assignment PIN_P11 -to int_clk
+set_location_assignment PIN_D12 -to motion_dir[2]
+set_location_assignment PIN_C11 -to motion_dir[1]
+set_location_assignment PIN_C10 -to motion_dir[0]
+set_location_assignment PIN_B8 -to reset
+set_location_assignment PIN_A7 -to motion_trig
+set_location_assignment PIN_N3 -to hsync
+set_location_assignment PIN_N1 -to vsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to int_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to motion_dir[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to motion_dir[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to motion_dir[0]
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to motion_trig
+set_instance_assignment -name IO_STANDARD "3.3 V SCHMITT TRIGGER" -to reset
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rgb_out[0]
+set_location_assignment PIN_Y1 -to rgb_out[11]
+set_location_assignment PIN_Y2 -to rgb_out[10]
+set_location_assignment PIN_V1 -to rgb_out[9]
+set_location_assignment PIN_AA1 -to rgb_out[8]
+set_location_assignment PIN_R1 -to rgb_out[7]
+set_location_assignment PIN_R2 -to rgb_out[6]
+set_location_assignment PIN_T2 -to rgb_out[5]
+set_location_assignment PIN_W1 -to rgb_out[4]
+set_location_assignment PIN_N2 -to rgb_out[3]
+set_location_assignment PIN_P4 -to rgb_out[2]
+set_location_assignment PIN_T1 -to rgb_out[1]
+set_location_assignment PIN_P1 -to rgb_out[0]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name EXTERNAL_FLASH_FALLBACK_ADDRESS 00000000
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name INTERNAL_FLASH_UPDATE_MODE "SINGLE IMAGE WITH ERAM"
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
