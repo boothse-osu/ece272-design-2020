@@ -14,23 +14,24 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
-// CREATED		"Wed Jun 03 00:03:05 2020"
+// CREATED		"Fri Jun 05 14:46:38 2020"
 
-module simulation_testing(
-	ps2key_clk,
-	sin,
-	clk,
+module ps2driver(
+	ps2_data,
+	clk_50MHz,
+	ps2key_clk_16kHz,
 	motion,
 	numbers
 );
 
 
-input wire	ps2key_clk;
-input wire	sin;
-input wire	clk;
+input wire	ps2_data;
+input wire	clk_50MHz;
+input wire	ps2key_clk_16kHz;
 output wire	[2:0] motion;
-output wire	[4:0] numbers;
+output wire	[3:0] numbers;
 
+wire	clk;
 wire	manual_reset;
 wire	[10:0] q;
 wire	reset;
@@ -46,10 +47,10 @@ assign	SYNTHESIZED_WIRE_2 = 1;
 
 
 shiftreg	b2v_inst(
-	.clk(ps2key_clk),
+	.clk(ps2key_clk_16kHz),
 	.reset(manual_reset),
 	.load(SYNTHESIZED_WIRE_0),
-	.sin(sin),
+	.sin(ps2_data),
 	
 	.sout(reset),
 	.q(q));
@@ -57,17 +58,17 @@ shiftreg	b2v_inst(
 
 
 synchronizer	b2v_inst1(
-	.clk(clk),
+	.clk(clk_50MHz),
 	.d(reset),
 	.q(SYNTHESIZED_WIRE_1));
 
+assign	manual_reset = reset | ps2_data;
 
-ps2key_numbers	b2v_inst10(
+
+ps2key_numbers	b2v_inst16(
 	.q(q),
 	.numbers(numbers));
-	defparam	b2v_inst10.N = 11;
-
-assign	manual_reset = reset | sin;
+	defparam	b2v_inst16.N = 11;
 
 
 
@@ -88,5 +89,6 @@ ps2key_sprite	b2v_inst8(
 	.directions(SYNTHESIZED_WIRE_3));
 	defparam	b2v_inst8.N = 11;
 
+assign	clk = clk_50MHz;
 
 endmodule

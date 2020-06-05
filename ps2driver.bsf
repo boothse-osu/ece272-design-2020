@@ -26,8 +26,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "16KHz_ps2key_clk" (rect 0 0 114 19)(font "Intel Clear" (font_size 8)))
-		(text "16KHz_ps2key_clk" (rect 21 27 135 46)(font "Intel Clear" (font_size 8)))
+		(text "ps2key_clk_16kHz" (rect 0 0 113 19)(font "Intel Clear" (font_size 8)))
+		(text "ps2key_clk_16kHz" (rect 21 27 134 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
@@ -40,8 +40,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "50MHz_clk" (rect 0 0 66 19)(font "Intel Clear" (font_size 8)))
-		(text "50MHz_clk" (rect 21 59 87 78)(font "Intel Clear" (font_size 8)))
+		(text "clk_50MHz" (rect 0 0 66 19)(font "Intel Clear" (font_size 8)))
+		(text "clk_50MHz" (rect 21 59 87 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
