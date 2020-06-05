@@ -18,7 +18,7 @@ module disp_driver (input  logic clk, reset,
         
         // if end of screen, move back to start
         if (!reset) vcount <= 0;
-		  else if (vcount == 524) vcount <= 0;
+		else if (vcount == 524 & hcount == 799) vcount <= 0;
     end
     
     always_comb begin
