@@ -33,8 +33,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 192 32)
 		(output)
-		(text "numbers[4..0]" (rect 0 0 56 12)(font "Arial" ))
-		(text "numbers[4..0]" (rect 115 27 171 39)(font "Arial" ))
+		(text "numbers[3..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "numbers[3..0]" (rect 116 27 171 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32)(line_width 3))
 	)
 	(parameter

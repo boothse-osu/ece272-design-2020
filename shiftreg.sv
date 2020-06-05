@@ -7,16 +7,10 @@ output logic [N-1:0]q,
 output logic sout);
 
 
-always_ff@(posedge clk)
+always_ff@(posedge clk, negedge reset)
 begin
-if(reset) 
-begin
-	if(N == 33)
-	q<= 33'b1_1111_1111_1111_1111_1111_1111_1111_1111;
-	else
-	q<= 11'b11111111111;
-end
-
+if(!reset) 
+	q<= 34'b11_1111_1111_1111_1111_1111_1111_1111_1111;
 else if(load) q <=d;
 else q <= {q[N-2:0], sin};
 end
