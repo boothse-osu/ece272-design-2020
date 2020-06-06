@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
-// CREATED		"Tue Jun 02 17:04:34 2020"
+// CREATED		"Fri Jun 05 21:49:59 2020"
 
 module nes_block(
 	clk_50MHz,
