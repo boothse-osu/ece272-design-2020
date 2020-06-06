@@ -18,4 +18,3 @@ end
 assign sout = q[N-1];
 
 endmodule 
-
