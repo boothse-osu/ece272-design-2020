@@ -15,7 +15,7 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
-// CREATED		"Tue Jun 02 17:04:46 2020"
+// CREATED		"Fri Jun 05 21:49:45 2020"
 
 module sprite_block(
 	reset,
