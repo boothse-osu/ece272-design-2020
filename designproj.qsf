@@ -51,19 +51,6 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name SYSTEMVERILOG_FILE pulse_gen.sv
-set_global_assignment -name SYSTEMVERILOG_FILE disp_mux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE address_converter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sprite_controller.sv
-set_global_assignment -name SYSTEMVERILOG_FILE comparator_m.sv
-set_global_assignment -name SYSTEMVERILOG_FILE comparator.sv
-set_global_assignment -name SYSTEMVERILOG_FILE rgb_gen.sv
-set_global_assignment -name SYSTEMVERILOG_FILE disp_driver.sv
-set_global_assignment -name SYSTEMVERILOG_FILE clockmod.sv
-set_global_assignment -name SYSTEMVERILOG_FILE shiftreg.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ps2key.sv
-set_global_assignment -name BDF_FILE designproj.bdf
-set_global_assignment -name QIP_FILE link_sprite.qip
 set_location_assignment PIN_P11 -to int_clk
 set_location_assignment PIN_D12 -to motion_dir[2]
 set_location_assignment PIN_C11 -to motion_dir[1]
@@ -113,4 +100,47 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name SYSTEMVERILOG_FILE sixdecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ClockDivider.sv
+set_global_assignment -name BDF_FILE vcr_test.bdf
+set_global_assignment -name BDF_FILE vcrdriver.bdf
+set_global_assignment -name BDF_FILE top_level.bdf
+set_global_assignment -name BDF_FILE synchronizer_test.bdf
+set_global_assignment -name BDF_FILE ps2driver.bdf
+set_global_assignment -name BDF_FILE irwave_test.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE sevenseg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE multiplexer.sv
+set_global_assignment -name VERILOG_FILE vcr_test.v
+set_global_assignment -name VERILOG_FILE vcrdriver.v
+set_global_assignment -name VERILOG_FILE synchronizer_test.v
+set_global_assignment -name VERILOG_FILE sprite_block.v
+set_global_assignment -name VERILOG_FILE simulation_testing.v
+set_global_assignment -name VERILOG_FILE ps2driver.v
+set_global_assignment -name VERILOG_FILE nes_block.v
+set_global_assignment -name VERILOG_FILE irwave_test.v
+set_global_assignment -name SYSTEMVERILOG_FILE synchronizer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ps2key_sprite.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ps2key_numbers.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vcr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE irwave.sv
+set_global_assignment -name BDF_FILE simulation_testing.bdf
+set_global_assignment -name BDF_FILE sprite_block.bdf
+set_global_assignment -name SYSTEMVERILOG_FILE pulse_on_change.sv
+set_global_assignment -name SYSTEMVERILOG_FILE nes_reader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE nes_motion.sv
+set_global_assignment -name SYSTEMVERILOG_FILE nes_clk.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pulse_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE disp_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE address_converter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sprite_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE comparator_m.sv
+set_global_assignment -name SYSTEMVERILOG_FILE comparator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rgb_gen.sv
+set_global_assignment -name SYSTEMVERILOG_FILE disp_driver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clockmod.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftreg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ps2key.sv
+set_global_assignment -name QIP_FILE link_sprite.qip
+set_global_assignment -name BDF_FILE designproj.bdf
+set_global_assignment -name BDF_FILE nes_block.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
