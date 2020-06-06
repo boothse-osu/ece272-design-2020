@@ -1,4 +1,4 @@
-module irwave (input logic clk, input logic irwave, input logic reset, 
+module irwave (input logic clk, input logic irwave, 
 output logic sin);
 
 //clk should be around 20 times slower than ir frequency: about 2kHz. 
@@ -10,9 +10,7 @@ logic [4:0]n1 = 0;
 
 always_ff@(posedge clk)
 begin
-	if(reset)
-	n1 <= 0;
-	else if(irwave == 1)
+	if(irwave == 1)
 	n1 <= n1+1;
 	else if (irwave == 0)
 		begin
