@@ -51,7 +51,6 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name SYSTEMVERILOG_FILE synchronizer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ps2key_sprite.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ps2key_numbers.sv
-set_global_assignment -name SYSTEMVERILOG_FILE shiftreg.sv
 set_global_assignment -name SYSTEMVERILOG_FILE vcr.sv
 set_global_assignment -name SYSTEMVERILOG_FILE irwave.sv
 set_global_assignment -name BDF_FILE simulation_testing.bdf
@@ -112,7 +111,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE pulse_on_change.sv
 set_global_assignment -name SYSTEMVERILOG_FILE nes_reader.sv
 set_global_assignment -name SYSTEMVERILOG_FILE nes_motion.sv
 set_global_assignment -name SYSTEMVERILOG_FILE nes_clk.sv
-set_global_assignment -name VERILOG_FILE link_sprite_bb.v
 set_global_assignment -name SYSTEMVERILOG_FILE pulse_gen.sv
 set_global_assignment -name SYSTEMVERILOG_FILE disp_mux.sv
 set_global_assignment -name SYSTEMVERILOG_FILE address_converter.sv
